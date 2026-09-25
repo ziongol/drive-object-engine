@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    {
+      "name": "04_Turn_04_Production_Specification_and_Release_Contract.md",
+      "sha256": "c2127e7a6c5546be7fa5bf8b624aef8f81c2c163cbb14361d1c4dcc1fe8ac023",
+      "size_bytes": 90677
+    },
+    {
+      "name": "04_Turn_04_Acceptance_Test_Matrix.md",
+      "sha256": "0231d9915073b4eee043e234905a91cbf969250212e2252c8d71b9b0282961b8",
+      "size_bytes": 51969
+    }
+  ],
+  "scope": "Original uploaded specification byte identities, not implementation conformance"
+}

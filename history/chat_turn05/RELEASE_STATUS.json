@@ -1,0 +1,37 @@
+{
+  "apple_silicon_qualification": "NOT_EXECUTED",
+  "cas_protocol": "gdoe-cas/1",
+  "cli_protocol": "gdoe-cli/2",
+  "environment": {
+    "architecture": "x86_64",
+    "platform": "linux",
+    "python": "3.13.5",
+    "release": "6.18.44",
+    "source_sha256": "5a6c036f147bcd0877b0b75e2349b30a3ade0c8af49500c3738ed0e4d6e31da9",
+    "sqlite": "3.46.1"
+  },
+  "errors": 0,
+  "failures": 0,
+  "fileprovider_qualification": "NOT_EXECUTED",
+  "full_turn_04_conformance": "NOT_CLAIMED",
+  "google_drive_upload": "NOT_PERFORMED_NO_UPLOAD_ACTION_AVAILABLE",
+  "intended_drive_folder_id": "1p9XS4zIGL9rIUvbbLSQ7XmU6oWLeTfD2",
+  "negative_controls": 8,
+  "negative_controls_detected": 8,
+  "passed": 66,
+  "primary_evidence": [
+    "evidence/final_run_02/results.json",
+    "evidence/negative_controls_02/results.json",
+    "evidence/cli_workflow.json"
+  ],
+  "production_qualification": "NOT_GRANTED",
+  "release_kind": "RUNNABLE_QUALIFICATION_CANDIDATE",
+  "skips": 0,
+  "source_hashes": {
+    "drive_cas.py": "5a6c036f147bcd0877b0b75e2349b30a3ade0c8af49500c3738ed0e4d6e31da9",
+    "test_drive_cas.py": "a95b32b2c607ad86206df6bf5b601d04713eadc61070fa95004bf12aa1d4912a"
+  },
+  "test_methods": 66,
+  "version": "0.5.0-rc1",
+  "worker_protocol": "gdoe-worker/2"
+}

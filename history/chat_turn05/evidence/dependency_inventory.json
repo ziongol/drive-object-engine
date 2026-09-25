@@ -1,0 +1,33 @@
+{
+  "engine_imports": [
+    "__future__",
+    "argparse",
+    "contextlib",
+    "ctypes",
+    "datetime",
+    "decimal",
+    "errno",
+    "fcntl",
+    "hashlib",
+    "io",
+    "json",
+    "os",
+    "pathlib",
+    "platform",
+    "re",
+    "selectors",
+    "shutil",
+    "signal",
+    "sqlite3",
+    "stat",
+    "subprocess",
+    "sys",
+    "tempfile",
+    "time",
+    "typing",
+    "uuid"
+  ],
+  "non_stdlib_imports": [],
+  "scope": "Static source imports; native libc calls and enrolled Python subprocesses are separately documented",
+  "engine_sha256": "5a6c036f147bcd0877b0b75e2349b30a3ade0c8af49500c3738ed0e4d6e31da9"
+}

@@ -1,0 +1,24 @@
+{
+  "foreign_key_violations": [],
+  "integrity": "ok",
+  "schema_sha256": "c92eb528325418d88938a266a079ad5b02d666c5df266385c0869b8685505e32",
+  "scope": "Extracted DDL executes on an isolated in-memory database; not durability qualification",
+  "sqlite": "3.46.1",
+  "tables": [
+    "acceptances",
+    "admission_requests",
+    "approvals",
+    "audit",
+    "bindings",
+    "exports",
+    "generations",
+    "incidents",
+    "meta",
+    "operations",
+    "pins",
+    "qualifications",
+    "receipt_outbox",
+    "snapshots",
+    "tasks"
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "elapsed_seconds": 161.988393934,
+  "environment": {
+    "architecture": "x86_64",
+    "platform": "linux",
+    "python": "3.13.5",
+    "release": "6.18.44",
+    "source_sha256": "012b414039529d1a2e930eeebf33a072184efb0c47eff024b9de23c46c2b843a",
+    "sqlite": "3.46.1"
+  },
+  "errors": 0,
+  "failures": 0,
+  "finished_utc": "2026-09-23T19:17:54.946679+00:00",
+  "production_qualification": "NOT_GRANTED",
+  "records": [
+    {
+      "detail": null,
+      "elapsed_seconds": 3.677982,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT02.test_empty_dataset_allowed_and_forbidden"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.822038,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT02.test_empty_stream_allow"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 1.276831,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT02.test_empty_stream_forbid"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.004227,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT02.test_zero_length_block_ref_rejected"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.126897,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT03.test_boundary_packing_both_profiles"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.00391,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT03.test_no_empty_tail"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.001,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT03.test_short_reads_are_not_eof"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.68275,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT06.test_correct_chunks_wrong_whole_digest"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.714634,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT06.test_early_eof"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.0044,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT06.test_read_exact_without_hash_is_still_exact"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.684048,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT06.test_same_length_changed_payload"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.691461,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT06.test_totals_recomputed"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 1.327838,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT06.test_trailing_byte_even_if_prefix_hash_matches"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.172607,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT07.test_legitimate_repetition_preserved"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.692473,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT07.test_reordered_leaves_rehashed_metadata_wrong_reconstruction"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 3.443267,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT07.test_root_bytes_not_repaired"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 3.329199,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT07.test_valid_fully_rehashed_alternate_root_needs_approval"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.000531,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT15.test_directory_no_clobber_and_success"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.000493,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT15.test_file_no_clobber_native"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.000331,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT15.test_unsupported_does_not_fall_back"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.549721,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT18.test_durable_order_restart_one_root"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.878856,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT18.test_earlier_unknown_prevents_bypass"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.042194,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT18.test_epoch_never_reopens_task"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 3.289536,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT18.test_stale_fence_blocks_request"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.226316,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT18.test_two_actual_processes_compete"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.009687,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT22.test_destination_tamper_before_readback_detected"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 3.347494,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT22.test_fresh_verify_is_read_only"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.084486,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT22.test_private_corruption_not_certified_by_old_receipt"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.924076,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT22.test_private_snapshot_survives_source_tamper_and_loss"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.667922,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAT22.test_tamper_after_capture_before_admission_uses_good_generation"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 5.113089,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_cli_json_and_root_operand"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.004905,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_decimal_gb_exact"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.47732,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_explicit_output_and_replay"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 5.182619,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_explicit_release_then_prune"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 2.807313,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_external_candidate_commit_reconstructs"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.00385,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_lost_authority_does_not_reinitialize"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.051213,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_modified_operation_intent_rejected"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.297075,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_offline_no_new_provider_observation"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.010515,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_output_no_overwrite"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 5.09519,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_pins_survive_prune_zero"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 2.98853,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_prune_dry_run_no_mutation"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.427507,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_receipt_outbox_export_is_not_remote_receipt"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.004785,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_strict_canonical_profile"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 1.51669,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_symlink_source_rejected"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.009077,
+      "status": "PASS",
+      "test": "test_drive_cas.TestAdditional.test_unregistered_root_get_refused"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.058706,
+      "status": "PASS",
+      "test": "test_drive_cas.TestExtraFaults.test_artificial_equal_key_different_bytes_is_not_overwritten"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.007699,
+      "status": "PASS",
+      "test": "test_drive_cas.TestExtraFaults.test_export_rename_response_lost_reconciles_original_inode"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.788631,
+      "status": "PASS",
+      "test": "test_drive_cas.TestExtraFaults.test_inconsistent_lengths_rejected_before_cache_reuse"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 2.919589,
+      "status": "PASS",
+      "test": "test_drive_cas.TestExtraFaults.test_native_16m_layout_reader"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 3.580892,
+      "status": "PASS",
+      "test": "test_drive_cas.TestPublication.test_occupied_final_corrupt_never_repaired"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 3.595557,
+      "status": "PASS",
+      "test": "test_drive_cas.TestPublication.test_occupied_final_identical_reconciles"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 2.83738,
+      "status": "PASS",
+      "test": "test_drive_cas.TestPublication.test_same_operation_replay_source_changed"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.184675,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_blocked_earlier_request_does_not_choose_directory_order"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 2.842241,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_digest_namespace_is_not_guessed"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.491608,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_injected_child_sigbus_does_not_kill_controller"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.004273,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_raw_canonical_only_guard"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.363833,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_reader_pin_not_expired_with_approval"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.008114,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_restored_known_history_barrier_blocks_new_decision"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 4.550917,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_sigkill_after_decision_commit_replays_exact_receipt"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 1.49565,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_source_fifo_rejected_without_waiting_for_writer"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.375303,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_unrelated_equal_output_stays_unowned_on_retry"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 0.211422,
+      "status": "PASS",
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_worker_timeout_is_bounded_and_no_output_registered"
+    }
+  ],
+  "scope": "Selected tests on the recorded local host; no Apple/FileProvider inference",
+  "skips": 0,
+  "source_hashes_after": {
+    "drive_cas.py": "012b414039529d1a2e930eeebf33a072184efb0c47eff024b9de23c46c2b843a",
+    "test_drive_cas.py": "5bb861fd2490c8aefc31624d27bbe5a58ddd39cbc09aa3e610e31b4589137c89"
+  },
+  "source_hashes_before": {
+    "drive_cas.py": "012b414039529d1a2e930eeebf33a072184efb0c47eff024b9de23c46c2b843a",
+    "test_drive_cas.py": "5bb861fd2490c8aefc31624d27bbe5a58ddd39cbc09aa3e610e31b4589137c89"
+  },
+  "source_unchanged": true,
+  "started_utc": "2026-09-23T19:15:12.958239+00:00",
+  "success": true,
+  "tests_run": 62
+}

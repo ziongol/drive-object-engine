@@ -1,0 +1,23 @@
+{
+  "caveat": "54-count matches retrieved Drive lineage; no raw Mac source digest or result file was available to bind exact run to exact engine.",
+  "classification": "USER_REPORTED_NOT_RAW_VERIFIED",
+  "new_security_framework_signer_qualified": false,
+  "protocol": "gdoe-upstream-attestation/1",
+  "raw_file_retrieved": false,
+  "raw_named_file": "apple_silicon_results.json",
+  "reported_acceptance_suites": 16,
+  "reported_capabilities": [
+    "Darwin renameatx_np(RENAME_EXCL) file and tree",
+    "zero external pip dependencies"
+  ],
+  "reported_elapsed_seconds": 47.085,
+  "reported_errors": 0,
+  "reported_failures": 0,
+  "reported_pass": 54,
+  "reported_platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "reported_python": "3.14.7",
+  "reported_skips": 0,
+  "reported_sqlite": "3.53.4",
+  "reported_tests": 54,
+  "source": "Turn 6 user request, 23 September 2026"
+}

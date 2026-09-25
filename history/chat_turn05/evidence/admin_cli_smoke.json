@@ -1,0 +1,218 @@
+{
+  "engine_sha256": "5a6c036f147bcd0877b0b75e2349b30a3ade0c8af49500c3738ed0e4d6e31da9",
+  "records": [
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/enroll_example.py",
+        "create",
+        "--private-root",
+        "/tmp/drive-cas-admin-check-ul622n35/private",
+        "--exchange-root",
+        "/tmp/drive-cas-admin-check-ul622n35/exchange",
+        "--source-root",
+        "/tmp/drive-cas-admin-check-ul622n35/source",
+        "--export-root",
+        "/tmp/drive-cas-admin-check-ul622n35/output",
+        "--confirm-unsynced-private"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": {
+        "config": "/tmp/drive-cas-admin-check-ul622n35/private/config.json",
+        "intake": "/tmp/drive-cas-admin-check-ul622n35/exchange/lab-transfer/artifact-r1",
+        "mode": "LAB_CANDIDATE",
+        "production_qualification": "NOT_GRANTED"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-admin-check-ul622n35/private/config.json",
+        "put",
+        "/tmp/drive-cas-admin-check-ul622n35/source/input.bin"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "put",
+        "exit_code": 0,
+        "goal": "LOCAL_PUBLICATION",
+        "goal_met": true,
+        "operation_id": "2056ff63-4a5f-4ec5-ba76-cbfc67cc62c4",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "admission": "NOT_ASSERTED",
+          "content_sha256": "76614828f45a7e09e793c2e992207536547d8571100becbd92522cf9cf840695",
+          "dataset_sha256": "43cb38db7d000090d350a35aabed71da109e86accc7ecb8b0a5884f74f3bf67a",
+          "file_map_sha256": "8ae44feb00ec34fef16950c07c88089bda2ecc3a72b1d3e390022cbc5eab5340",
+          "local_publication": "LOCAL_PUBLISHED",
+          "operation_id": "2056ff63-4a5f-4ec5-ba76-cbfc67cc62c4",
+          "qualification": "LAB_CANDIDATE_UNQUALIFIED",
+          "remote_evidence": "NOT_ASSERTED",
+          "root": "c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89",
+          "size_bytes": 38,
+          "source_scope": "CAPTURED_BYTES",
+          "staging_retained": null,
+          "submission_dir": "/tmp/drive-cas-admin-check-ul622n35/exchange/lab-transfer/artifact-r1/chunks/c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89",
+          "task_key": {
+            "campaign": "lab-transfer",
+            "store_id": "b1f4be59-5075-4f19-9b28-65f081d8248b",
+            "task_id": "artifact",
+            "task_revision": 1
+          }
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/enroll_example.py",
+        "approve",
+        "--config",
+        "/tmp/drive-cas-admin-check-ul622n35/private/config.json",
+        "--root",
+        "c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": {
+        "approved_root": "c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89",
+        "task_key": {
+          "campaign": "lab-transfer",
+          "store_id": "b1f4be59-5075-4f19-9b28-65f081d8248b",
+          "task_id": "artifact",
+          "task_revision": 1
+        }
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-admin-check-ul622n35/private/config.json",
+        "commit",
+        "/tmp/drive-cas-admin-check-ul622n35/exchange/lab-transfer/artifact-r1/chunks/c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "commit",
+        "exit_code": 0,
+        "goal": "CANONICAL_ADMISSION",
+        "goal_met": true,
+        "operation_id": "b669797d-bc3d-4db0-af18-f3968f2ffb7d",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "acceptance_receipt": {
+            "accepted_at_utc": "2026-09-23T19:29:36.648170Z",
+            "authority_epoch": 1,
+            "authority_id": "7bb1de62-1e2c-4c53-91bb-4c1ab2d1a80a",
+            "campaign": "lab-transfer",
+            "contract_sha256": "2849c1688fab5ff5395d665f74f094e8fdc2c5a5378e389f0eb00d024a252d06",
+            "decision_sequence": 1,
+            "fence_epoch": 1,
+            "kind": "qualification_acceptance",
+            "operation_id": "b669797d-bc3d-4db0-af18-f3968f2ffb7d",
+            "receipt_id": "4332ba5e-0fa3-46a2-9137-f3777e9632cf",
+            "schema_version": 1,
+            "semantic_review": "NOT_ASSESSED",
+            "state": "ACCEPTED_LAB_CANDIDATE",
+            "store_id": "b1f4be59-5075-4f19-9b28-65f081d8248b",
+            "submission_sha256": "c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89",
+            "task_id": "artifact",
+            "task_revision": 1,
+            "verification_receipt_sha256": "fb755a883c722bc264fd555e68c42909281feece42c93c0ffb136220c955d789",
+            "wire_profile": "ascii-json-1"
+          },
+          "acceptance_receipt_sha256": "bd729e0f0c38cfb6e11705d12bd162e9f26cefea6492773661558de37c7b5472",
+          "decision_sequence": 1,
+          "observation": "CURRENT_OPERATION",
+          "operation_id": "b669797d-bc3d-4db0-af18-f3968f2ffb7d",
+          "original_operation_id": "b669797d-bc3d-4db0-af18-f3968f2ffb7d",
+          "qualification": "LAB_CANDIDATE_UNQUALIFIED",
+          "receipt_export": "PENDING",
+          "remote_evidence": "NOT_ASSERTED",
+          "replayed": false,
+          "request_sequence": 1,
+          "root": "c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89",
+          "task_key": {
+            "campaign": "lab-transfer",
+            "store_id": "b1f4be59-5075-4f19-9b28-65f081d8248b",
+            "task_id": "artifact",
+            "task_revision": 1
+          }
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-admin-check-ul622n35/private/config.json",
+        "get",
+        "c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "get",
+        "exit_code": 0,
+        "goal": "FILE_MATERIALIZED",
+        "goal_met": true,
+        "operation_id": "0cf6feb0-1639-4c65-950f-3ccf6dc4eacc",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "admission": "NOT_ASSERTED",
+          "content_sha256": "76614828f45a7e09e793c2e992207536547d8571100becbd92522cf9cf840695",
+          "file_map_sha256": "8ae44feb00ec34fef16950c07c88089bda2ecc3a72b1d3e390022cbc5eab5340",
+          "generation_id": "78f7c6c3-48c0-4842-8919-a71267bf0b93",
+          "observation": "CURRENT_BYTES",
+          "operation_id": "0cf6feb0-1639-4c65-950f-3ccf6dc4eacc",
+          "output_path": "/tmp/drive-cas-admin-check-ul622n35/private/exports/0cf6feb0-1639-4c65-950f-3ccf6dc4eacc/76614828f45a7e09e793c2e992207536547d8571100becbd92522cf9cf840695.bin",
+          "remote_evidence": "NOT_ASSERTED",
+          "replayed": false,
+          "retention": "EXPLICIT_RELEASE_REQUIRED",
+          "root": "c34227a042219cffb9072d149a6d96e68c3f9ba1db11c779151b57637ba79f89",
+          "size_bytes": 38
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/enroll_example.py",
+        "release-export",
+        "--config",
+        "/tmp/drive-cas-admin-check-ul622n35/private/config.json",
+        "--operation-id",
+        "0cf6feb0-1639-4c65-950f-3ccf6dc4eacc",
+        "--end-of-use-reason",
+        "Owned smoke test consumer finished"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": {
+        "released_export": "0cf6feb0-1639-4c65-950f-3ccf6dc4eacc"
+      }
+    }
+  ],
+  "scope": "Disposable local LAB_CANDIDATE administrative helper smoke; not target qualification",
+  "success": true
+}

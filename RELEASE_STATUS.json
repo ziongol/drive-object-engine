@@ -1,0 +1,35 @@
+{
+  "activation_tests": "FIXTURE_ONLY",
+  "automatic_database_conversion": false,
+  "engineering_status": "IMPLEMENTED_AND_LOCALLY_TESTED",
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sqlite": "3.46.1"
+  },
+  "existing_lab_dispatcher": "NOT_MODIFIED",
+  "final_tests": {
+    "elapsed_seconds": 488.09337170899994,
+    "errors": 0,
+    "evidence": "evidence/final_turn06/results.json",
+    "failures": 0,
+    "methods": 180,
+    "negative_controls_detected": 8,
+    "negative_controls_total": 8,
+    "passed": 180,
+    "skips": 0,
+    "source_unchanged": true
+  },
+  "historical_receipts": "ORIGINAL_BYTES_AND_QUALIFICATION_PRESERVED",
+  "live_cellular": "NOT_EXECUTED",
+  "live_fileprovider": "NOT_EXECUTED",
+  "native_core_preserved": true,
+  "new_apple_security_backend": "IMPLEMENTED_NOT_EXECUTED_ON_DARWIN",
+  "physical_multi_device": "NOT_EXECUTED",
+  "power_loss": "NOT_EXECUTED",
+  "production_qualification": "NOT_GRANTED_FOR_NEW_RELEASE",
+  "protocol": "gdoe-release-status/1",
+  "release": "0.6.0-rc1",
+  "remote_delivery": "REPORT_SEPARATELY_AFTER_AUTHENTICATED_READBACK",
+  "upstream_mac": "USER_REPORTED_NOT_RAW_VERIFIED"
+}

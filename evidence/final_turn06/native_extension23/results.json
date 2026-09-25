@@ -1,0 +1,208 @@
+{
+  "elapsed_seconds": 179.24604847799992,
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sqlite": "3.46.1"
+  },
+  "errors": 0,
+  "failures": 0,
+  "fault_scope": "Modeled FileProvider with real reads; injected signal and private-mmap fault are separately labeled.",
+  "module": "test_native_turn06",
+  "production_qualification": "NOT_GRANTED",
+  "records": [
+    {
+      "detail": null,
+      "elapsed_seconds": 8.098642,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeActivation.test_fixture_activation_destination_tamper_blocks"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 10.631115,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeActivation.test_fixture_activation_fresh_readback_not_history_rewrite"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 8.76322,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeActivation.test_no_implicit_activation"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 9.952422,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeLifecycleAndWrapper.test_default_export_survives_prune"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 9.724877,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeLifecycleAndWrapper.test_retire_exact_generation_resumable_no_new_pin"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.961928,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeLifecycleAndWrapper.test_retire_pinned_refused_and_floor_preserved"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 10.63403,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeLifecycleAndWrapper.test_single_authority_distinct_candidates_do_not_reopen_k"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 8.856564,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeLifecycleAndWrapper.test_wrapper_prune_floor_and_plan"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 8.24598,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeLifecycleAndWrapper.test_wrapper_selects_native_status_and_drains"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.668573,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeProviderReadModel.test_native_injected_eio_after_actual_read"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.212857,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeProviderReadModel.test_native_injected_sigbus_after_actual_read"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.784233,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeProviderReadModel.test_native_modeled_hydration_actual_bytes"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.454013,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_audit_append_only_and_unsealed_tail"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.25421,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_exact_source_and_profile_preserved"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.879135,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_hash_and_signature_tamper_rejected"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.25796,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_install_idempotent_keeps_decisions"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.528404,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_lost_publish_response_reuses_exact_signature"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.941805,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_no_secret_in_cloud_files"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.361213,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_offline_never_calls_provider"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.953859,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_replay_returns_no_new_decision"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.204052,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_retry_budget_survives_reconstruction"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 6.868914,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_rotate_and_revoke"
+    },
+    {
+      "detail": null,
+      "elapsed_seconds": 7.001707,
+      "status": "PASS",
+      "test": "test_native_turn06.TestNativeSignedReceipts.test_sign_public_verify_no_upgrade"
+    }
+  ],
+  "skips": 0,
+  "source_hashes_after": {
+    "drive_cas.py": "215425ccdbbad0fe889a2bda8b1cf8f8600723b58cc0be47e5cb5ba9742312a6",
+    "drive_cas_native.py": "4c1700151602c9f10a7ac23785f346292bee7251efe915d07ab72f63fe73d065",
+    "enroll_example.py": "e3d7df24330163b056f9067683c700822a12dc74b54cf4514f8d25fcae254a92",
+    "example_workflow.py": "dc9b933bfd6b5abdf610482aaeb95f9d8e01864052741416a7866d6968e19db9",
+    "fileprovider_mock.py": "18f78d8428f1202a553cc4aceaf72e3aa8387271c0af4674fb625218c8939712",
+    "lab": "424d265142f9d1882b43d7d884d822a4793a0ce5ebe2c048dc3ba49de641d277",
+    "native_fileprovider_mock.py": "559de48c9314a3b8181da761de254fe52c431be0a72bd77ecc8f7611b9be334f",
+    "native_jobs.py": "f39b0b04153ea815afe7cc4bc4c4ada347ded13c68c6669d6db619cb82f37edb",
+    "native_receipts.py": "f185fec59d21549b5848a64392d5bf9af59ad8f8e08ecac30c57997041f486e8",
+    "receipt_crypto.py": "fdc2d6f2204952be1a07880b08a7c365e6219275235ea9780e628631428336a7",
+    "receipt_engine.py": "4f890b9bafb14e9f0be392a685ae526eedbb8f9a633a7590e1d24572b692a827",
+    "release_profiles.py": "d01d25053130f24e4ec8a671f9c6a4621b91b2c2b766b3793455d23995b89808",
+    "run_extension_validation.py": "aafd482032f1b155d8c63b749bf871db97510b3273c7ae3afce974e39945c8e8",
+    "run_native_validation.py": "cd60a152e299fcc0f54becc14227d3325127ad9ae7fc19e0d8781cc93e16cd51",
+    "run_negative_controls.py": "776139856fadd816c9477bc122a2b38827b66acf6a0c431ff2305f817b9fd9f2",
+    "run_release_validation.py": "948f4bd294f68eaf02acf90fbaa95fce3baabaa841289c9b91ee093f38ed439d",
+    "run_validation.py": "fbbaf49053bbe29eaec4cb504ace5f578f08790939fcdd72ea7521a3bfe5e558",
+    "test_drive_cas.py": "a95b32b2c607ad86206df6bf5b601d04713eadc61070fa95004bf12aa1d4912a",
+    "test_native_turn06.py": "8448155e0e6e7ca9a326c3aaa4f7a0b0e8b2b135dbee6b0ecdfc82a09622f36f",
+    "test_turn06.py": "2123822bf9fb9a67ff110fb77daa9d05ee15e35e4f14813a97302fcaf8752591",
+    "tools/drive_engine.py": "240c9377aae2e3a45f639daf1b3e9754eb6c7b3f06d423bdf750cbda090f28ef",
+    "tools/receipt_admin.py": "f02b7b0fca8e182d8950716d20bf8c7ddf95dc55f28cf2de2e71749b713bf6e6",
+    "tools/verify_receipt.py": "3fdf3c864f3b269bcea5754eb856ad51668332f560ec7e79d42cd72d578e8ddf"
+  },
+  "source_hashes_before": {
+    "drive_cas.py": "215425ccdbbad0fe889a2bda8b1cf8f8600723b58cc0be47e5cb5ba9742312a6",
+    "drive_cas_native.py": "4c1700151602c9f10a7ac23785f346292bee7251efe915d07ab72f63fe73d065",
+    "enroll_example.py": "e3d7df24330163b056f9067683c700822a12dc74b54cf4514f8d25fcae254a92",
+    "example_workflow.py": "dc9b933bfd6b5abdf610482aaeb95f9d8e01864052741416a7866d6968e19db9",
+    "fileprovider_mock.py": "18f78d8428f1202a553cc4aceaf72e3aa8387271c0af4674fb625218c8939712",
+    "lab": "424d265142f9d1882b43d7d884d822a4793a0ce5ebe2c048dc3ba49de641d277",
+    "native_fileprovider_mock.py": "559de48c9314a3b8181da761de254fe52c431be0a72bd77ecc8f7611b9be334f",
+    "native_jobs.py": "f39b0b04153ea815afe7cc4bc4c4ada347ded13c68c6669d6db619cb82f37edb",
+    "native_receipts.py": "f185fec59d21549b5848a64392d5bf9af59ad8f8e08ecac30c57997041f486e8",
+    "receipt_crypto.py": "fdc2d6f2204952be1a07880b08a7c365e6219275235ea9780e628631428336a7",
+    "receipt_engine.py": "4f890b9bafb14e9f0be392a685ae526eedbb8f9a633a7590e1d24572b692a827",
+    "release_profiles.py": "d01d25053130f24e4ec8a671f9c6a4621b91b2c2b766b3793455d23995b89808",
+    "run_extension_validation.py": "aafd482032f1b155d8c63b749bf871db97510b3273c7ae3afce974e39945c8e8",
+    "run_native_validation.py": "cd60a152e299fcc0f54becc14227d3325127ad9ae7fc19e0d8781cc93e16cd51",
+    "run_negative_controls.py": "776139856fadd816c9477bc122a2b38827b66acf6a0c431ff2305f817b9fd9f2",
+    "run_release_validation.py": "948f4bd294f68eaf02acf90fbaa95fce3baabaa841289c9b91ee093f38ed439d",
+    "run_validation.py": "fbbaf49053bbe29eaec4cb504ace5f578f08790939fcdd72ea7521a3bfe5e558",
+    "test_drive_cas.py": "a95b32b2c607ad86206df6bf5b601d04713eadc61070fa95004bf12aa1d4912a",
+    "test_native_turn06.py": "8448155e0e6e7ca9a326c3aaa4f7a0b0e8b2b135dbee6b0ecdfc82a09622f36f",
+    "test_turn06.py": "2123822bf9fb9a67ff110fb77daa9d05ee15e35e4f14813a97302fcaf8752591",
+    "tools/drive_engine.py": "240c9377aae2e3a45f639daf1b3e9754eb6c7b3f06d423bdf750cbda090f28ef",
+    "tools/receipt_admin.py": "f02b7b0fca8e182d8950716d20bf8c7ddf95dc55f28cf2de2e71749b713bf6e6",
+    "tools/verify_receipt.py": "3fdf3c864f3b269bcea5754eb856ad51668332f560ec7e79d42cd72d578e8ddf"
+  },
+  "source_unchanged": true,
+  "started_utc": "2026-09-23T21:57:02.040689+00:00",
+  "success": true,
+  "tests_run": 23
+}

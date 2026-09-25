@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drive-object-engine"
+version = "1.0.0"
+description = "Machine-native distributed content-addressed storage (CAS) and FileProvider isolation engine for Google Drive on Apple Silicon"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Leonid Majbits", email = "77941374+LeonidMajbits@users.noreply.github.com" }
+]
+keywords = ["cas", "google-drive", "apple-silicon", "fileprovider", "merkle", "atomic-fs"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: MacOS",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools]
+py-modules = ["drive_cas", "drive_cas_native", "receipt_crypto", "receipt_engine"]

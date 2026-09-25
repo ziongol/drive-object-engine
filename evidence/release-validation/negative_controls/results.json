@@ -1,0 +1,72 @@
+{
+  "controls": [
+    {
+      "control": "SHORT_READ_IS_EOF",
+      "detected": true,
+      "log_sha256": "da7e0c2eed02d79366354f8ef216193505e7b6b6ac5c2253fc5a87efb2a630a3",
+      "returncode": 1,
+      "test": "test_drive_cas.TestAT03.test_short_reads_are_not_eof",
+      "variant_sha256": "f4ab50cc565d1ce3edbb76069f80afe57609a7de98091a2d2c9cd9732690e992"
+    },
+    {
+      "control": "NO_EXACT_LENGTH_CHECK",
+      "detected": true,
+      "log_sha256": "dea720021694e421e173aff15bc5762714b0bd9a5f37852819edf79765cb8219",
+      "returncode": 1,
+      "test": "test_drive_cas.TestAT06.test_read_exact_without_hash_is_still_exact",
+      "variant_sha256": "886775959ab34375252a52142148eef7d96df9c64f711714e2062513b31640a5"
+    },
+    {
+      "control": "PERMISSIVE_CANONICAL_ENCODING",
+      "detected": true,
+      "log_sha256": "aa2a8b8b1b162b29fe7fb3abc3efa5da81e6d74119d2973a255c242f62e69472",
+      "returncode": 1,
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_raw_canonical_only_guard",
+      "variant_sha256": "32291ca9ad3738fd8f2be7823b5f5923747773fbeb1491a7373924569a9f7574"
+    },
+    {
+      "control": "RENAME_OVERWRITES",
+      "detected": true,
+      "log_sha256": "4e1154d507fcfac2f4d344797c3c6dda1ba12ea8e79bc13cc375a4d0f3068051",
+      "returncode": 1,
+      "test": "test_drive_cas.TestAT15.test_file_no_clobber_native",
+      "variant_sha256": "414938062df1df7fa4c71a6284b2b3873cc3781cb3e44a394fb009c105a0a35a"
+    },
+    {
+      "control": "STALE_FENCE_ACCEPTED",
+      "detected": true,
+      "log_sha256": "2da46d972cc06a41d09e667a4eac94f91c281753b7457f6d7efc384068fef4cd",
+      "returncode": 1,
+      "test": "test_drive_cas.TestAT18.test_stale_fence_blocks_request",
+      "variant_sha256": "0747b30e9f652503ad29d60c0d6426fd649535130b7b6a0ac814f25a7acab86d"
+    },
+    {
+      "control": "NO_DESTINATION_READBACK",
+      "detected": true,
+      "log_sha256": "c6ccf0e24a5859df8da0798d3dfffa4b89ef068768853f97be95d90dd90b4913",
+      "returncode": 1,
+      "test": "test_drive_cas.TestAT22.test_destination_tamper_before_readback_detected",
+      "variant_sha256": "7a58c06f0c87a93afdccc8ac1aeb1d9108121eddb43bacfa726eaf9d9dd0c537"
+    },
+    {
+      "control": "UNOWNED_EQUAL_OUTPUT_REUSED",
+      "detected": true,
+      "log_sha256": "0e4df6ced09817ec86807d62e4b1841d2da6bc1c108d118e8d3bbc08ddac224b",
+      "returncode": 1,
+      "test": "test_drive_cas.TestRecoveryAndContainment.test_unrelated_equal_output_stays_unowned_on_retry",
+      "variant_sha256": "45f538af37e5308b31a9680f7c4027027d5f73f9f912dfc8cb2a9ba6b4de6e68"
+    },
+    {
+      "control": "MERKLE_EDGE_ORDER_IGNORED",
+      "detected": true,
+      "log_sha256": "ada8f7c5906836e9e325c3cb7c6fa0616531fec298738ef1b918190ea6f91792",
+      "returncode": 1,
+      "test": "test_drive_cas.TestAT07.test_reordered_leaves_rehashed_metadata_wrong_reconstruction",
+      "variant_sha256": "dfc3ec4a035f16480d141116096c6433b65ce035272f39fbe08b0948bd2e224f"
+    }
+  ],
+  "original_source_sha256": "215425ccdbbad0fe889a2bda8b1cf8f8600723b58cc0be47e5cb5ba9742312a6",
+  "original_unchanged": true,
+  "scope": "Intentionally defective source copies; not a cryptographic break or production qualification",
+  "success": true
+}

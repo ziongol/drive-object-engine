@@ -1,0 +1,322 @@
+{
+  "environment": {
+    "architecture": "x86_64",
+    "platform": "linux",
+    "python": "3.13.5",
+    "release": "6.18.44",
+    "source_sha256": "5a6c036f147bcd0877b0b75e2349b30a3ade0c8af49500c3738ed0e4d6e31da9",
+    "sqlite": "3.46.1"
+  },
+  "production_qualification": "NOT_GRANTED",
+  "records": [
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-workflow-ywedo1r1/private/config.json",
+        "--operation-id",
+        "66b71af6-efd8-470e-b5f5-20b4492388b7",
+        "put",
+        "/tmp/drive-cas-workflow-ywedo1r1/source/input.bin"
+      ],
+      "command": "put",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "put",
+        "exit_code": 0,
+        "goal": "LOCAL_PUBLICATION",
+        "goal_met": true,
+        "operation_id": "66b71af6-efd8-470e-b5f5-20b4492388b7",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "admission": "NOT_ASSERTED",
+          "content_sha256": "3df0a5404428f011d80b9f31a4282cb0e46ab0bee23fe7c77cec41c107820ba0",
+          "dataset_sha256": "2c200c30dee86a86f9aeceb6079b37612c2444b1fad3c938f172eabac4ab2037",
+          "file_map_sha256": "1cc4850e13362f276b61b52514624777708cda8e8d6beacd7e9e95dba11a2753",
+          "local_publication": "LOCAL_PUBLISHED",
+          "operation_id": "66b71af6-efd8-470e-b5f5-20b4492388b7",
+          "qualification": "LAB_CANDIDATE_UNQUALIFIED",
+          "remote_evidence": "NOT_ASSERTED",
+          "root": "ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a",
+          "size_bytes": 4194560,
+          "source_scope": "CAPTURED_BYTES",
+          "staging_retained": null,
+          "submission_dir": "/tmp/drive-cas-workflow-ywedo1r1/exchange/intake/chunks/ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a",
+          "task_key": {
+            "campaign": "example",
+            "store_id": "b78ef1da-31bb-4a8c-b52e-c89bc973dff9",
+            "task_id": "artifact",
+            "task_revision": 1
+          }
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-workflow-ywedo1r1/private/config.json",
+        "--operation-id",
+        "cd4f29c4-34a7-4115-872f-4a668ecd3543",
+        "verify",
+        "/tmp/drive-cas-workflow-ywedo1r1/exchange/intake/chunks/ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a"
+      ],
+      "command": "verify",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "verify",
+        "exit_code": 0,
+        "goal": "FULL_CLOSURE_VERIFIED",
+        "goal_met": true,
+        "operation_id": "cd4f29c4-34a7-4115-872f-4a668ecd3543",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "admission": "NOT_ASSERTED",
+          "files": [
+            {
+              "content_sha256": "3df0a5404428f011d80b9f31a4282cb0e46ab0bee23fe7c77cec41c107820ba0",
+              "file_map": {
+                "kind": "file_map",
+                "sha256": "1cc4850e13362f276b61b52514624777708cda8e8d6beacd7e9e95dba11a2753",
+                "size_bytes": 346
+              },
+              "output_rel": "files/00000000.bin",
+              "path": "artifact.bin",
+              "size_bytes": 4194560
+            }
+          ],
+          "integrity": "MATCH",
+          "membership": "OBSERVED_SELF_CONTAINED",
+          "qualification": "UNQUALIFIED_OBSERVATION",
+          "remote_evidence": "NOT_ASSERTED",
+          "retained_snapshot": "NOT_CREATED",
+          "root": "ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a",
+          "scope": "OBSERVED_CLOSURE",
+          "task_key": {
+            "campaign": "example",
+            "store_id": "b78ef1da-31bb-4a8c-b52e-c89bc973dff9",
+            "task_id": "artifact",
+            "task_revision": 1
+          },
+          "totals": {
+            "artifact_count": 1,
+            "chunk_references": 2,
+            "logical_bytes": 4194560,
+            "unique_block_bytes": 4194560,
+            "unique_blocks": 2,
+            "unique_metadata_bytes": 910,
+            "unique_metadata_nodes": 3
+          }
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-workflow-ywedo1r1/private/config.json",
+        "--operation-id",
+        "ffee6b9c-26c3-4cf3-95ac-98529f1b61a5",
+        "commit",
+        "/tmp/drive-cas-workflow-ywedo1r1/exchange/intake/chunks/ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a"
+      ],
+      "command": "commit",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "commit",
+        "exit_code": 0,
+        "goal": "CANONICAL_ADMISSION",
+        "goal_met": true,
+        "operation_id": "ffee6b9c-26c3-4cf3-95ac-98529f1b61a5",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "acceptance_receipt": {
+            "accepted_at_utc": "2026-09-23T19:24:14.571739Z",
+            "authority_epoch": 1,
+            "authority_id": "6890ce42-287a-4ea8-a3e9-165663029fc6",
+            "campaign": "example",
+            "contract_sha256": "37499298996008d4c384f32f9007eb9dff6ab2dc10f51fa8c883316d3061ce40",
+            "decision_sequence": 1,
+            "fence_epoch": 1,
+            "kind": "qualification_acceptance",
+            "operation_id": "ffee6b9c-26c3-4cf3-95ac-98529f1b61a5",
+            "receipt_id": "09844e0f-61e4-4a16-9edf-ebbcc0890218",
+            "schema_version": 1,
+            "semantic_review": "NOT_ASSESSED",
+            "state": "ACCEPTED_LAB_CANDIDATE",
+            "store_id": "b78ef1da-31bb-4a8c-b52e-c89bc973dff9",
+            "submission_sha256": "ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a",
+            "task_id": "artifact",
+            "task_revision": 1,
+            "verification_receipt_sha256": "08d37a2ff57ad6eae1b0862404e7a33acea3eb8e57576b10c0dae4bb5b0d016d",
+            "wire_profile": "ascii-json-1"
+          },
+          "acceptance_receipt_sha256": "a68b27bb40d69d1a6f08e6f25b69fa11a4f91879ee273de0643071428ebb31b9",
+          "decision_sequence": 1,
+          "observation": "CURRENT_OPERATION",
+          "operation_id": "ffee6b9c-26c3-4cf3-95ac-98529f1b61a5",
+          "original_operation_id": "ffee6b9c-26c3-4cf3-95ac-98529f1b61a5",
+          "qualification": "LAB_CANDIDATE_UNQUALIFIED",
+          "receipt_export": "PENDING",
+          "remote_evidence": "NOT_ASSERTED",
+          "replayed": false,
+          "request_sequence": 1,
+          "root": "ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a",
+          "task_key": {
+            "campaign": "example",
+            "store_id": "b78ef1da-31bb-4a8c-b52e-c89bc973dff9",
+            "task_id": "artifact",
+            "task_revision": 1
+          }
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-workflow-ywedo1r1/private/config.json",
+        "--operation-id",
+        "0c621551-505f-4aac-8a4f-b4ad5483a8a9",
+        "get",
+        "ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a",
+        "--output",
+        "/tmp/drive-cas-workflow-ywedo1r1/output/recovered.bin"
+      ],
+      "command": "get",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "get",
+        "exit_code": 0,
+        "goal": "FILE_MATERIALIZED",
+        "goal_met": true,
+        "operation_id": "0c621551-505f-4aac-8a4f-b4ad5483a8a9",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "admission": "NOT_ASSERTED",
+          "content_sha256": "3df0a5404428f011d80b9f31a4282cb0e46ab0bee23fe7c77cec41c107820ba0",
+          "file_map_sha256": "1cc4850e13362f276b61b52514624777708cda8e8d6beacd7e9e95dba11a2753",
+          "generation_id": "04f7adef-c659-4037-bb77-6384dcf13a0f",
+          "observation": "CURRENT_BYTES",
+          "operation_id": "0c621551-505f-4aac-8a4f-b4ad5483a8a9",
+          "output_path": "/tmp/drive-cas-workflow-ywedo1r1/output/recovered.bin",
+          "remote_evidence": "NOT_ASSERTED",
+          "replayed": false,
+          "retention": "USER_OWNED",
+          "root": "ab39f825b3f35db7606a2a05a66da7654e2c41d4ba051be2a9ec8ab15c78838a",
+          "size_bytes": 4194560
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-workflow-ywedo1r1/private/config.json",
+        "--operation-id",
+        "837946dd-4ae0-40f3-889d-4055c858d7e9",
+        "prune",
+        "--max-size-gb",
+        "0",
+        "--dry-run"
+      ],
+      "command": "prune",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "command": "prune",
+        "exit_code": 0,
+        "goal": "PRUNE_PLAN_PRODUCED",
+        "goal_met": true,
+        "operation_id": "837946dd-4ae0-40f3-889d-4055c858d7e9",
+        "protocol": "gdoe-cli/2",
+        "reason": "GOAL_ESTABLISHED",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "accounted_before_bytes": 8391149,
+          "action": "PLAN_ONLY",
+          "candidates": [],
+          "operation_id": null,
+          "protected_floor_bytes": 8391149,
+          "target_bytes": 0,
+          "target_met_now": false,
+          "target_would_be_met": false,
+          "unresolved_count": 0
+        },
+        "state": "DONE",
+        "version": "0.5.0-rc1"
+      }
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/Google_Drive_Object_Engine_Turn_05/drive_cas.py",
+        "--config",
+        "/tmp/drive-cas-workflow-ywedo1r1/private/config.json",
+        "--operation-id",
+        "99a06153-88e7-44de-ae90-577065a07f16",
+        "prune",
+        "--max-size-gb",
+        "0"
+      ],
+      "command": "prune",
+      "returncode": 8,
+      "stderr": "",
+      "stdout": {
+        "command": "prune",
+        "exit_code": 8,
+        "goal": "CACHE_TARGET_MET",
+        "goal_met": false,
+        "operation_id": "99a06153-88e7-44de-ae90-577065a07f16",
+        "protocol": "gdoe-cli/2",
+        "reason": "HOLD_RESOURCE",
+        "remote_evidence": "NOT_ASSERTED",
+        "result": {
+          "accounted_after_bytes": 8391149,
+          "accounted_before_bytes": 8391149,
+          "action": "RECLAIM",
+          "operation_id": "99a06153-88e7-44de-ae90-577065a07f16",
+          "protected_floor_bytes": 8391149,
+          "removed_accounted_bytes": 0,
+          "removed_count": 0,
+          "skipped_count": 0,
+          "target_bytes": 0,
+          "target_met_now": false,
+          "target_would_be_met": false,
+          "unresolved_count": 0
+        },
+        "state": "HOLD_RESOURCE",
+        "version": "0.5.0-rc1"
+      }
+    }
+  ],
+  "scope": "LOCAL_LAB_CANDIDATE_ONLY",
+  "source_sha256": "3df0a5404428f011d80b9f31a4282cb0e46ab0bee23fe7c77cec41c107820ba0",
+  "source_size": 4194560,
+  "success": true
+}

@@ -1,0 +1,414 @@
+{
+  "external_pip_packages": [],
+  "files": [
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "contextlib",
+        "ctypes",
+        "datetime",
+        "decimal",
+        "errno",
+        "fcntl",
+        "hashlib",
+        "io",
+        "json",
+        "os",
+        "pathlib",
+        "platform",
+        "re",
+        "receipt_engine",
+        "selectors",
+        "shutil",
+        "signal",
+        "sqlite3",
+        "stat",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "typing",
+        "uuid"
+      ],
+      "path": "drive_cas.py",
+      "sha256": "215425ccdbbad0fe889a2bda8b1cf8f8600723b58cc0be47e5cb5ba9742312a6"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "contextlib",
+        "ctypes",
+        "datetime",
+        "errno",
+        "fcntl",
+        "functools",
+        "hashlib",
+        "io",
+        "json",
+        "os",
+        "pathlib",
+        "platform",
+        "random",
+        "re",
+        "selectors",
+        "shutil",
+        "signal",
+        "sqlite3",
+        "stat",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "typing",
+        "uuid"
+      ],
+      "path": "drive_cas_native.py",
+      "sha256": "4c1700151602c9f10a7ac23785f346292bee7251efe915d07ab72f63fe73d065"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "drive_cas",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "path": "enroll_example.py",
+      "sha256": "e3d7df24330163b056f9067683c700822a12dc74b54cf4514f8d25fcae254a92"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "drive_cas",
+        "hashlib",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "uuid"
+      ],
+      "path": "example_workflow.py",
+      "sha256": "dc9b933bfd6b5abdf610482aaeb95f9d8e01864052741416a7866d6968e19db9"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "contextlib",
+        "drive_cas",
+        "errno",
+        "hashlib",
+        "json",
+        "mmap",
+        "os",
+        "pathlib",
+        "signal",
+        "sys",
+        "time"
+      ],
+      "path": "fileprovider_mock.py",
+      "sha256": "18f78d8428f1202a553cc4aceaf72e3aa8387271c0af4674fb625218c8939712"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "contextlib",
+        "drive_cas_native",
+        "errno",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "signal",
+        "sys"
+      ],
+      "path": "native_fileprovider_mock.py",
+      "sha256": "559de48c9314a3b8181da761de254fe52c431be0a72bd77ecc8f7611b9be334f"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "drive_cas",
+        "drive_cas_native",
+        "pathlib",
+        "sys"
+      ],
+      "path": "native_jobs.py",
+      "sha256": "f39b0b04153ea815afe7cc4bc4c4ada347ded13c68c6669d6db619cb82f37edb"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "contextlib",
+        "drive_cas",
+        "drive_cas_native",
+        "os",
+        "pathlib",
+        "platform",
+        "receipt_crypto",
+        "receipt_engine",
+        "sqlite3",
+        "sys",
+        "typing"
+      ],
+      "path": "native_receipts.py",
+      "sha256": "f185fec59d21549b5848a64392d5bf9af59ad8f8e08ecac30c57997041f486e8"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "base64",
+        "contextlib",
+        "ctypes",
+        "hashlib",
+        "sys"
+      ],
+      "path": "receipt_crypto.py",
+      "sha256": "fdc2d6f2204952be1a07880b08a7c365e6219275235ea9780e628631428336a7"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "contextlib",
+        "drive_cas",
+        "hashlib",
+        "os",
+        "pathlib",
+        "platform",
+        "receipt_crypto",
+        "sqlite3",
+        "stat",
+        "sys",
+        "typing"
+      ],
+      "path": "receipt_engine.py",
+      "sha256": "4f890b9bafb14e9f0be392a685ae526eedbb8f9a633a7590e1d24572b692a827"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "drive_cas",
+        "drive_cas_native",
+        "native_receipts",
+        "pathlib",
+        "receipt_engine"
+      ],
+      "path": "release_profiles.py",
+      "sha256": "d01d25053130f24e4ec8a671f9c6a4621b91b2c2b766b3793455d23995b89808"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "datetime",
+        "hashlib",
+        "importlib",
+        "json",
+        "pathlib",
+        "platform",
+        "run_validation",
+        "sqlite3",
+        "sys",
+        "time",
+        "unittest"
+      ],
+      "path": "run_extension_validation.py",
+      "sha256": "aafd482032f1b155d8c63b749bf871db97510b3273c7ae3afce974e39945c8e8"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time"
+      ],
+      "path": "run_native_validation.py",
+      "sha256": "cd60a152e299fcc0f54becc14227d3325127ad9ae7fc19e0d8781cc93e16cd51"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "hashlib",
+        "json",
+        "pathlib",
+        "py_compile",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "path": "run_negative_controls.py",
+      "sha256": "776139856fadd816c9477bc122a2b38827b66acf6a0c431ff2305f817b9fd9f2"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "concurrent",
+        "datetime",
+        "json",
+        "pathlib",
+        "platform",
+        "run_extension_validation",
+        "sqlite3",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "path": "run_release_validation.py",
+      "sha256": "948f4bd294f68eaf02acf90fbaa95fce3baabaa841289c9b91ee093f38ed439d"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "datetime",
+        "drive_cas",
+        "hashlib",
+        "json",
+        "pathlib",
+        "sys",
+        "test_drive_cas",
+        "time",
+        "unittest"
+      ],
+      "path": "run_validation.py",
+      "sha256": "fbbaf49053bbe29eaec4cb504ace5f578f08790939fcdd72ea7521a3bfe5e558"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "copy",
+        "ctypes",
+        "drive_cas",
+        "hashlib",
+        "io",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "signal",
+        "sqlite3",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "unittest",
+        "uuid"
+      ],
+      "path": "test_drive_cas.py",
+      "sha256": "a95b32b2c607ad86206df6bf5b601d04713eadc61070fa95004bf12aa1d4912a"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "drive_cas",
+        "drive_cas_native",
+        "hashlib",
+        "json",
+        "native_receipts",
+        "os",
+        "pathlib",
+        "receipt_engine",
+        "release_profiles",
+        "sqlite3",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "unittest",
+        "uuid"
+      ],
+      "path": "test_native_turn06.py",
+      "sha256": "8448155e0e6e7ca9a326c3aaa4f7a0b0e8b2b135dbee6b0ecdfc82a09622f36f"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "contextlib",
+        "copy",
+        "decimal",
+        "drive_cas",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "receipt_crypto",
+        "receipt_engine",
+        "signal",
+        "sqlite3",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_drive_cas",
+        "unittest",
+        "uuid"
+      ],
+      "path": "test_turn06.py",
+      "sha256": "2123822bf9fb9a67ff110fb77daa9d05ee15e35e4f14813a97302fcaf8752591"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "__future__",
+        "drive_cas",
+        "pathlib",
+        "release_profiles",
+        "sys"
+      ],
+      "path": "tools/drive_engine.py",
+      "sha256": "240c9377aae2e3a45f639daf1b3e9754eb6c7b3f06d423bdf750cbda090f28ef"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "drive_cas",
+        "pathlib",
+        "receipt_crypto",
+        "release_profiles",
+        "sys"
+      ],
+      "path": "tools/receipt_admin.py",
+      "sha256": "f02b7b0fca8e182d8950716d20bf8c7ddf95dc55f28cf2de2e71749b713bf6e6"
+    },
+    {
+      "external_packages": [],
+      "imports": [
+        "drive_cas",
+        "pathlib",
+        "receipt_engine",
+        "sys"
+      ],
+      "path": "tools/verify_receipt.py",
+      "sha256": "3fdf3c864f3b269bcea5754eb856ad51668332f560ec7e79d42cd72d578e8ddf"
+    }
+  ],
+  "native_dependencies": {
+    "Darwin": [
+      "Security.framework",
+      "CoreFoundation.framework",
+      "libSystem native no-clobber and clock"
+    ],
+    "Linux qualification backend": [
+      "libcrypto.so.3",
+      "libc renameat2"
+    ]
+  },
+  "scope": "Static import inventory and explicit native library dependencies; no package installed."
+}

@@ -1,0 +1,29 @@
+{
+  "syntax_compiled_in_memory": [
+    "receipt_engine.py",
+    "run_extension_validation.py",
+    "native_receipts.py",
+    "native_jobs.py",
+    "enroll_example.py",
+    "fileprovider_mock.py",
+    "run_release_validation.py",
+    "drive_cas.py",
+    "native_fileprovider_mock.py",
+    "test_native_turn06.py",
+    "release_profiles.py",
+    "test_drive_cas.py",
+    "run_native_validation.py",
+    "run_negative_controls.py",
+    "run_validation.py",
+    "receipt_crypto.py",
+    "example_workflow.py",
+    "test_turn06.py",
+    "drive_cas_native.py",
+    "tools/verify_receipt.py",
+    "tools/receipt_admin.py",
+    "tools/drive_engine.py",
+    "lab"
+  ],
+  "all_sources_match_final_test_record": true,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
+}

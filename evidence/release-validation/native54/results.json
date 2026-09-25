@@ -1,0 +1,427 @@
+{
+  "batch_index": 0,
+  "batches": 1,
+  "cases": [
+    {
+      "detail": "",
+      "seconds": 2.368528,
+      "status": "PASS",
+      "suite": "AT-18",
+      "test": "__main__.Fixture.test_blocked_first_request_has_recorded_disposition"
+    },
+    {
+      "detail": "",
+      "seconds": 1.803781,
+      "status": "PASS",
+      "suite": "AT-03",
+      "test": "__main__.Fixture.test_boundary_packing_both_profiles"
+    },
+    {
+      "detail": "",
+      "seconds": 2.256074,
+      "status": "PASS",
+      "suite": "AT-18",
+      "test": "__main__.Fixture.test_broker_rejects_root_different_from_operation_intent"
+    },
+    {
+      "detail": "",
+      "seconds": 0.498267,
+      "status": "PASS",
+      "suite": "AT-07",
+      "test": "__main__.Fixture.test_changed_order_with_old_whole_digest_rejected"
+    },
+    {
+      "detail": "",
+      "seconds": 2.574932,
+      "status": "PASS",
+      "suite": "AT-32",
+      "test": "__main__.Fixture.test_cli_all_five_verbs_and_zero_hidden_acceptance"
+    },
+    {
+      "detail": "",
+      "seconds": 1.524128,
+      "status": "PASS",
+      "suite": "AT-32",
+      "test": "__main__.Fixture.test_cli_rejects_abbreviations_duplicate_flags_and_old_hash_namespace"
+    },
+    {
+      "detail": "",
+      "seconds": 0.443404,
+      "status": "PASS",
+      "suite": "AT-06",
+      "test": "__main__.Fixture.test_correct_leaves_wrong_whole_digest_rejected"
+    },
+    {
+      "detail": "",
+      "seconds": 1.622149,
+      "status": "PASS",
+      "suite": "AT-18",
+      "test": "__main__.Fixture.test_cross_task_cached_root_cannot_satisfy_other_contract"
+    },
+    {
+      "detail": "",
+      "seconds": 0.316206,
+      "status": "PASS",
+      "suite": "AT-04",
+      "test": "__main__.Fixture.test_depth_is_rejected_before_unbounded_parser"
+    },
+    {
+      "detail": "",
+      "seconds": 0.388751,
+      "status": "PASS",
+      "suite": "AT-22",
+      "test": "__main__.Fixture.test_destination_readback_is_required"
+    },
+    {
+      "detail": "",
+      "seconds": 1.249112,
+      "status": "PASS",
+      "suite": "AT-25",
+      "test": "__main__.Fixture.test_dry_run_no_deletion_and_decimal_units"
+    },
+    {
+      "detail": "",
+      "seconds": 2.705702,
+      "status": "PASS",
+      "suite": "AT-18",
+      "test": "__main__.Fixture.test_durable_request_order_survives_registry_reopen"
+    },
+    {
+      "detail": "",
+      "seconds": 0.442664,
+      "status": "PASS",
+      "suite": "AT-06",
+      "test": "__main__.Fixture.test_early_eof_rejected"
+    },
+    {
+      "detail": "",
+      "seconds": 0.422053,
+      "status": "PASS",
+      "suite": "AT-02",
+      "test": "__main__.Fixture.test_empty_artifact_requires_independent_permission"
+    },
+    {
+      "detail": "",
+      "seconds": 0.35386,
+      "status": "PASS",
+      "suite": "AT-02",
+      "test": "__main__.Fixture.test_empty_dataset_allow_and_forbid"
+    },
+    {
+      "detail": "",
+      "seconds": 1.084463,
+      "status": "PASS",
+      "suite": "AT-02",
+      "test": "__main__.Fixture.test_empty_dataset_can_be_admitted_under_its_own_contract"
+    },
+    {
+      "detail": "",
+      "seconds": 1.056645,
+      "status": "PASS",
+      "suite": "AT-02",
+      "test": "__main__.Fixture.test_empty_file_has_zero_blocks_and_known_hash"
+    },
+    {
+      "detail": "",
+      "seconds": 1.166407,
+      "status": "PASS",
+      "suite": "AT-19",
+      "test": "__main__.Fixture.test_exact_receipt_replay_after_source_deletion"
+    },
+    {
+      "detail": "",
+      "seconds": 2.016909,
+      "status": "PASS",
+      "suite": "AT-24",
+      "test": "__main__.Fixture.test_export_is_pinned_until_explicit_release"
+    },
+    {
+      "detail": "",
+      "seconds": 0.796341,
+      "status": "PASS",
+      "suite": "AT-07",
+      "test": "__main__.Fixture.test_fully_rehashed_alternate_cannot_replace_approved_root"
+    },
+    {
+      "detail": "",
+      "seconds": 1.292912,
+      "status": "PASS",
+      "suite": "AT-22",
+      "test": "__main__.Fixture.test_get_explicitly_approved_external_root_without_admission"
+    },
+    {
+      "detail": "",
+      "seconds": 1.829397,
+      "status": "PASS",
+      "suite": "AT-22",
+      "test": "__main__.Fixture.test_get_replay_checks_current_output"
+    },
+    {
+      "detail": "",
+      "seconds": 0.49422,
+      "status": "PASS",
+      "suite": "AT-06",
+      "test": "__main__.Fixture.test_inconsistent_reference_size_rejected"
+    },
+    {
+      "detail": "",
+      "seconds": 0.395327,
+      "status": "PASS",
+      "suite": "AT-14",
+      "test": "__main__.Fixture.test_isolated_child_sigbus_does_not_kill_parent"
+    },
+    {
+      "detail": "",
+      "seconds": 0.313027,
+      "status": "PASS",
+      "suite": "AT-08",
+      "test": "__main__.Fixture.test_logical_case_and_ancestor_collisions"
+    },
+    {
+      "detail": "",
+      "seconds": 0.372704,
+      "status": "PASS",
+      "suite": "AT-28",
+      "test": "__main__.Fixture.test_missing_authority_not_automatically_recreated"
+    },
+    {
+      "detail": "",
+      "seconds": 0.829966,
+      "status": "PASS",
+      "suite": "AT-09",
+      "test": "__main__.Fixture.test_missing_block_never_admitted_even_with_marker"
+    },
+    {
+      "detail": "",
+      "seconds": 0.396681,
+      "status": "PASS",
+      "suite": "AT-15",
+      "test": "__main__.Fixture.test_native_no_clobber_file_and_directory_probe"
+    },
+    {
+      "detail": "",
+      "seconds": 0.326526,
+      "status": "PASS",
+      "suite": "AT-15",
+      "test": "__main__.Fixture.test_native_occupied_destination_preserves_both_files"
+    },
+    {
+      "detail": "",
+      "seconds": 0.34501,
+      "status": "PASS",
+      "suite": "AT-15",
+      "test": "__main__.Fixture.test_negative_control_oracle_catches_overwrite"
+    },
+    {
+      "detail": "",
+      "seconds": 0.368656,
+      "status": "PASS",
+      "suite": "AT-07",
+      "test": "__main__.Fixture.test_negative_control_oracle_catches_sorted_or_dropped_references"
+    },
+    {
+      "detail": "",
+      "seconds": 1.938669,
+      "status": "PASS",
+      "suite": "AT-15",
+      "test": "__main__.Fixture.test_occupied_explicit_output_even_matching_bytes_is_refused"
+    },
+    {
+      "detail": "",
+      "seconds": 1.801288,
+      "status": "PASS",
+      "suite": "AT-32",
+      "test": "__main__.Fixture.test_offline_get_uses_private_bytes_but_verify_holds"
+    },
+    {
+      "detail": "",
+      "seconds": 1.11902,
+      "status": "PASS",
+      "suite": "AT-18",
+      "test": "__main__.Fixture.test_one_root_per_task_and_epoch_never_reopens_it"
+    },
+    {
+      "detail": "",
+      "seconds": 0.358096,
+      "status": "PASS",
+      "suite": "AT-07",
+      "test": "__main__.Fixture.test_original_root_rejects_modified_manifest"
+    },
+    {
+      "detail": "",
+      "seconds": 4.666543,
+      "status": "PASS",
+      "suite": "AT-22",
+      "test": "__main__.Fixture.test_private_corruption_blocks_get_and_admission"
+    },
+    {
+      "detail": "",
+      "seconds": 1.338342,
+      "status": "PASS",
+      "suite": "AT-19",
+      "test": "__main__.Fixture.test_readonly_status_does_not_rehydrate_or_mutate"
+    },
+    {
+      "detail": "",
+      "seconds": 1.429876,
+      "status": "PASS",
+      "suite": "AT-18",
+      "test": "__main__.Fixture.test_real_two_process_admission_race"
+    },
+    {
+      "detail": "",
+      "seconds": 0.504391,
+      "status": "PASS",
+      "suite": "AT-03",
+      "test": "__main__.Fixture.test_repeated_blocks_deduplicate_storage_not_occurrences"
+    },
+    {
+      "detail": "",
+      "seconds": 0.360166,
+      "status": "PASS",
+      "suite": "AT-28",
+      "test": "__main__.Fixture.test_replaced_valid_database_requires_recovery"
+    },
+    {
+      "detail": "",
+      "seconds": 0.448602,
+      "status": "PASS",
+      "suite": "AT-06",
+      "test": "__main__.Fixture.test_same_length_bit_tamper_rejected"
+    },
+    {
+      "detail": "",
+      "seconds": 1.35266,
+      "status": "PASS",
+      "suite": "AT-15",
+      "test": "__main__.Fixture.test_same_operation_put_is_identical_replay"
+    },
+    {
+      "detail": "",
+      "seconds": 1.054837,
+      "status": "PASS",
+      "suite": "AT-19",
+      "test": "__main__.Fixture.test_same_operation_rejects_altered_intent"
+    },
+    {
+      "detail": "",
+      "seconds": 0.382545,
+      "status": "PASS",
+      "suite": "AT-03",
+      "test": "__main__.Fixture.test_short_reads_do_not_end_chunk"
+    },
+    {
+      "detail": "",
+      "seconds": 0.339404,
+      "status": "PASS",
+      "suite": "AT-14",
+      "test": "__main__.Fixture.test_slot_cap_is_shared_between_controllers"
+    },
+    {
+      "detail": "",
+      "seconds": 0.331796,
+      "status": "PASS",
+      "suite": "AT-04",
+      "test": "__main__.Fixture.test_strict_json_rejects_ambiguous_encodings"
+    },
+    {
+      "detail": "",
+      "seconds": 0.417962,
+      "status": "PASS",
+      "suite": "AT-08",
+      "test": "__main__.Fixture.test_symlink_block_never_followed"
+    },
+    {
+      "detail": "",
+      "seconds": 0.379266,
+      "status": "PASS",
+      "suite": "AT-06",
+      "test": "__main__.Fixture.test_trailing_byte_rejected_not_valid_prefix"
+    },
+    {
+      "detail": "",
+      "seconds": 2.135264,
+      "status": "PASS",
+      "suite": "AT-22",
+      "test": "__main__.Fixture.test_transport_tamper_does_not_change_private_consumption"
+    },
+    {
+      "detail": "",
+      "seconds": 2.469818,
+      "status": "PASS",
+      "suite": "AT-18",
+      "test": "__main__.Fixture.test_unknown_earlier_request_blocks_later"
+    },
+    {
+      "detail": "",
+      "seconds": 0.369953,
+      "status": "PASS",
+      "suite": "AT-15",
+      "test": "__main__.Fixture.test_unsupported_native_symbol_fails_closed"
+    },
+    {
+      "detail": "",
+      "seconds": 0.683478,
+      "status": "PASS",
+      "suite": "AT-09",
+      "test": "__main__.Fixture.test_verify_does_not_mutate_source_or_database"
+    },
+    {
+      "detail": "",
+      "seconds": 0.688151,
+      "status": "PASS",
+      "suite": "AT-14",
+      "test": "__main__.Fixture.test_worker_timeout_releases_no_unverified_output"
+    },
+    {
+      "detail": "",
+      "seconds": 0.381053,
+      "status": "PASS",
+      "suite": "AT-02",
+      "test": "__main__.Fixture.test_zero_byte_block_reference_is_invalid"
+    }
+  ],
+  "elapsed_seconds": 57.187952333000794,
+  "engine_sha256": "4c1700151602c9f10a7ac23785f346292bee7251efe915d07ab72f63fe73d065",
+  "engine_version": "0.5.0",
+  "environment": {
+    "machine": "arm64",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "sqlite": "3.53.4"
+  },
+  "errors": 0,
+  "failures": 0,
+  "not_executed": [
+    "live Apple Silicon/FileProvider",
+    "actual cellular disconnect",
+    "independent-device replication",
+    "power-loss durability",
+    "complete 32-suite qualification and all negative controls"
+  ],
+  "protocol": "gdoe-test-results/1",
+  "qualification": "NOT_GRANTED",
+  "skips": 0,
+  "source_unchanged": true,
+  "success": true,
+  "suite_scope": {
+    "AT-02": "Empty file/dataset, exact encoding and independent contract permission",
+    "AT-03": "4/16 MiB boundaries and non-EOF short reads",
+    "AT-04": "Strict JSON subset, depth, unknown fields",
+    "AT-06": "EOF/trailing byte/whole digest and declared length",
+    "AT-07": "Order/repetition and trusted root binding",
+    "AT-08": "Symlink/special-file confinement subcases only",
+    "AT-09": "Missing block and read-only verification subcases",
+    "AT-14": "Injected child failure; no live FileProvider SIGBUS claim",
+    "AT-15": "Native local rename on recorded host; FileProvider remains unqualified",
+    "AT-18": "Real local SQLite ordering, conflict and process race",
+    "AT-19": "Stable intent and exact receipt replay subcases",
+    "AT-22": "Before/after capture tampering, private output readback",
+    "AT-24": "Explicit export lifetime and generation-specific reclamation",
+    "AT-25": "Private-only prune, exact decimal target, protected floor",
+    "AT-28": "Missing/replaced authority refuses initialization",
+    "AT-32": "Five verbs, machine output and no hidden admission subcases"
+  },
+  "test_sha256": "6f7aa2a4edc1ba5085b092ad8621c8cf53370cc5addccd6d7635e9b1eabc9a80",
+  "tests_run": 54
+}

@@ -1,0 +1,12 @@
+{
+  "altered_returncode": 1,
+  "altered_stdout": "Verification failure\n",
+  "backend": "openssl3-linux",
+  "correct_returncode": 0,
+  "correct_stdout": "Verified OK\n",
+  "message_hex": "47444f452d5349474e45442d524543454950542d56310063726f73732d696e7465726661636520766572696669636174696f6e2066697874757265",
+  "public_key_hex": "04fa5e21736d65264e951b342d9ca28b3206ae72c600723f32af8c2e3790bcff911c90bba884afd300398a887c18ce0b1a2772acf9ffab5191191ba13e4f7e40eb",
+  "scope": "Cross-interface interoperability; same underlying system OpenSSL, not independent algorithm verification",
+  "signature_hex": "3046022100eead2734cf83771497d87175915b27cb1e24a11b614ed51815287aa283f75a40022100e9c9e4c33b030bca140647aff3dff2c9f5f79e158fb92d35a83b232b0f658bad",
+  "success": true
+}

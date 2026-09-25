@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+"""Standalone bundle launcher. Do not overwrite an existing lab dispatcher."""
+import sys
+from tools.drive_engine import main
+if __name__=='__main__':
+    if sys.argv[1:2]!=['drive']: raise SystemExit('usage: ./lab drive ...')
+    raise SystemExit(main(sys.argv[2:]))

@@ -1,0 +1,24 @@
+{
+  "automatic_database_conversion": false,
+  "chat66": {
+    "bundle_sha256_recorded_in_turn05": "b056a6bbe0f55015c4e44b499176a796bf1e9a58dbaa627c9256609f06a5bea8",
+    "bundle_size_bytes": 104635,
+    "config_version": 1,
+    "core_source_change": "Turn 6 explicit additions",
+    "original_engine_sha256": "5a6c036f147bcd0877b0b75e2349b30a3ade0c8af49500c3738ed0e4d6e31da9",
+    "source": "Turn 5 conversation attachment",
+    "test_methods": 66
+  },
+  "native54": {
+    "bundle_sha256": "00b2c904ef8d1d6756d31e1ec81709ba466b93c088f03dceb372dec6b703a06f",
+    "bundle_size_bytes": 100914,
+    "config_protocol": "gdoe-config/2",
+    "core_source_change": "NONE",
+    "engine_sha256": "4c1700151602c9f10a7ac23785f346292bee7251efe915d07ab72f63fe73d065",
+    "schema_change": "Explicit additive t6_* extension only",
+    "source": "Drive file 1s4MJCIyD1h_b34BLoOdMhD0oX68geqO8",
+    "test_methods": 54,
+    "test_sha256": "6f7aa2a4edc1ba5085b092ad8621c8cf53370cc5addccd6d7635e9b1eabc9a80"
+  },
+  "protocol": "gdoe-source-lineages/1"
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "artifact_packaging_checks",
+  "not_engine_test": true,
+  "source_provenance": {
+    "04_Turn_04_Production_Specification_and_Release_Contract.md": {
+      "bytes": 90677,
+      "sha256": "c2127e7a6c5546be7fa5bf8b624aef8f81c2c163cbb14361d1c4dcc1fe8ac023"
+    },
+    "04_Turn_04_Acceptance_Test_Matrix.md": {
+      "bytes": 51969,
+      "sha256": "0231d9915073b4eee043e234905a91cbf969250212e2252c8d71b9b0282961b8"
+    }
+  },
+  "stdlib_imports": {
+    "drive_cas.py": [
+      "__future__",
+      "argparse",
+      "contextlib",
+      "ctypes",
+      "datetime",
+      "errno",
+      "fcntl",
+      "functools",
+      "hashlib",
+      "io",
+      "json",
+      "os",
+      "pathlib",
+      "platform",
+      "random",
+      "re",
+      "selectors",
+      "shutil",
+      "signal",
+      "sqlite3",
+      "stat",
+      "subprocess",
+      "sys",
+      "tempfile",
+      "time",
+      "typing",
+      "uuid"
+    ],
+    "test_drive_cas.py": [
+      "__future__",
+      "argparse",
+      "contextlib",
+      "drive_cas",
+      "fcntl",
+      "hashlib",
+      "io",
+      "json",
+      "os",
+      "pathlib",
+      "platform",
+      "shutil",
+      "signal",
+      "sqlite3",
+      "subprocess",
+      "sys",
+      "tempfile",
+      "time",
+      "unittest",
+      "uuid"
+    ]
+  },
+  "final_validation_methods": 54,
+  "batches": 18,
+  "exact_source_pair_matched": true,
+  "missing_or_duplicate_methods": 0,
+  "qualification": "NOT_GRANTED",
+  "excluded_from_runtime_archive": [
+    "__pycache__",
+    "earlier-build passing JSON summaries",
+    "private fixture databases",
+    "credentials",
+    "platform binaries"
+  ],
+  "artifact_hashes": {
+    "drive_cas.py": "4c1700151602c9f10a7ac23785f346292bee7251efe915d07ab72f63fe73d065",
+    "test_drive_cas.py": "6f7aa2a4edc1ba5085b092ad8621c8cf53370cc5addccd6d7635e9b1eabc9a80",
+    "README.md": "02d1803305dcabc2be2afb08f88b71273eb300dec2f4b924feb017506f056d6c",
+    "05_Turn_05_Implementation_Report.md": "9d0d4e7e08bb0889be72e15f06d58cfcc14e4926f2e355a52ce8d7534afd280c"
+  }
+}

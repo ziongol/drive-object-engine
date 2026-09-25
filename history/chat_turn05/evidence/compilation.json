@@ -1,0 +1,42 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "records": [
+    {
+      "compilation": "PASS",
+      "path": "drive_cas.py",
+      "sha256": "5a6c036f147bcd0877b0b75e2349b30a3ade0c8af49500c3738ed0e4d6e31da9",
+      "size_bytes": 132226
+    },
+    {
+      "compilation": "PASS",
+      "path": "enroll_example.py",
+      "sha256": "e3d7df24330163b056f9067683c700822a12dc74b54cf4514f8d25fcae254a92",
+      "size_bytes": 4352
+    },
+    {
+      "compilation": "PASS",
+      "path": "example_workflow.py",
+      "sha256": "dc9b933bfd6b5abdf610482aaeb95f9d8e01864052741416a7866d6968e19db9",
+      "size_bytes": 2898
+    },
+    {
+      "compilation": "PASS",
+      "path": "run_negative_controls.py",
+      "sha256": "776139856fadd816c9477bc122a2b38827b66acf6a0c431ff2305f817b9fd9f2",
+      "size_bytes": 4831
+    },
+    {
+      "compilation": "PASS",
+      "path": "run_validation.py",
+      "sha256": "fbbaf49053bbe29eaec4cb504ace5f578f08790939fcdd72ea7521a3bfe5e558",
+      "size_bytes": 2822
+    },
+    {
+      "compilation": "PASS",
+      "path": "test_drive_cas.py",
+      "sha256": "a95b32b2c607ad86206df6bf5b601d04713eadc61070fa95004bf12aa1d4912a",
+      "size_bytes": 39325
+    }
+  ],
+  "scope": "Compilation only; not behavioral or target qualification"
+}
