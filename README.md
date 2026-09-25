@@ -3,7 +3,7 @@
 > **Engineering Provenance & Authorship**: Leonid Majbits / Gemini Operator Lab (ZION Chassis) in partnership with Frontier Systems Foundries (OpenAI GPT-6 Max).  
 > **Falsification Guarantee**: Every claim is backed by reproducible raw machine receipts in `/evidence`, verified on Apple Silicon bare-metal hardware (`macOS ARM64`).
 
-**Release:** 1.0.0. Native-signed receipt outbox, explicit activation, protected-generation retirement, and a lab CLI adapter. Zero third-party dependencies (`pip`). Verified across 180 qualification tests on Darwin metal. Results and remaining native gates are in `06_Turn_06_Production_Qualification_Report.md` and `RELEASE_STATUS.json`.
+**Release:** 1.0.1. Native-signed receipt outbox, explicit activation, protected-generation retirement, and red-team fault-injection stress hardening. Zero third-party dependencies (`pip`). Verified on Darwin metal. Results and remaining native gates are in `06_Turn_06_Production_Qualification_Report.md` and `RELEASE_STATUS.json`.
 
 ## Start with the right existing store
 

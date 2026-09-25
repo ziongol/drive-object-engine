@@ -304,7 +304,12 @@ def stream_digest(stream: BinaryIO, expected_size: int | None = None,
         require(n <= limit and (expected_size is None or n <= expected_size), "LENGTH_MISMATCH")
         h.update(b)
         if output is not None:
-            output.write(b)
+            rem = memoryview(b)
+            while rem:
+                w = output.write(rem)
+                if w is None:
+                    require(False, "WRITE_WOULD_BLOCK", code=3)
+                rem = rem[w:]
     if expected_size is not None:
         require(n == expected_size, "LENGTH_MISMATCH")
     return h.hexdigest(), n
@@ -328,9 +333,18 @@ def copy_checked(src: str | Path, dst: str | Path, expected: str, size: int) -> 
 
 
 def identical(a: str | Path, b: str | Path) -> bool:
+    def read_exact(stream: BinaryIO, size: int) -> bytes:
+        buf = bytearray()
+        while len(buf) < size:
+            chunk = stream.read(size - len(buf))
+            require(chunk is not None, "READ_WOULD_BLOCK", code=3)
+            if not chunk:
+                break
+            buf.extend(chunk)
+        return bytes(buf)
     with open_regular(a) as x, open_regular(b) as y:
         while True:
-            ax, by = x.read(IO_SIZE), y.read(IO_SIZE)
+            ax, by = read_exact(x, IO_SIZE), read_exact(y, IO_SIZE)
             if ax != by:
                 return False
             if not ax:
@@ -994,6 +1008,8 @@ class AuthorityRegistry:
         with self.transaction() as con:
             con.execute("UPDATE operations SET state=?,error=? WHERE o=? AND state!='DONE'",
                         (state, local_json({"reason": exc.reason, "code": exc.code, "message": str(exc)}), o))
+            if state in ("REJECTED", "HOLD_AUTHORITY"):
+                con.execute("DELETE FROM reservations WHERE o=?", (o,))
             if exc.reason == "HASH_IDENTITY_INCIDENT":
                 self.audit(con, "HASH_IDENTITY_INCIDENT", {"o": o})
                 con.execute("UPDATE store_info SET health='INCIDENT'")
@@ -1244,6 +1260,7 @@ class WorkerSupervisor:
         self.root = Path(root); self.registry = registry
         self.clock = registry.clock if registry is not None else Clock()
         self.last_invocation: str | None = None
+        self._op_guards: dict[str, int] = {}
 
     def run(self, kind: str, args: dict, *, timeout: float = 120,
             operation: str | None = None) -> dict:
@@ -1281,11 +1298,21 @@ class WorkerSupervisor:
                             (j, operation, generation, kind, "RUNNING", None, str(work), utc(), None, None))
         process = None; out = bytearray(); err = bytearray(); dropped = 0
         started = self.clock.ns()
+        op_guard = self._op_guards.get(operation) if operation is not None else None
+        inherited = [slot]
+        dup_op = None
+        if op_guard is not None:
+            dup_op = os.dup(op_guard)
+            inherited.append(dup_op)
         try:
-            process = subprocess.Popen([sys.executable, "-I", str(Path(__file__).absolute()),
-                                        "--_worker", str(work / "request.json")],
-                                       stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                                       close_fds=True, pass_fds=(slot,))
+            try:
+                process = subprocess.Popen([sys.executable, "-I", str(Path(__file__).absolute()),
+                                            "--_worker", str(work / "request.json")],
+                                           stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                           close_fds=True, pass_fds=tuple(inherited))
+            finally:
+                if dup_op is not None:
+                    os.close(dup_op)
             if operation is not None and self.registry:
                 with self.registry.transaction() as con:
                     con.execute("UPDATE invocations SET pid=? WHERE j=?", (process.pid, j))
@@ -1619,6 +1646,12 @@ class LocalCacheEvictor:
                     con.execute("UPDATE generations SET state='ABSENT' WHERE g=? AND state='RETIRING'", (row["g"],))
                     self.reg.audit(con, "GENERATION_REMOVED", {"g": row["g"]})
                 removed += row["size_bytes"]; count += 1
+            registered = {r["g"] for r in self.reg.read("SELECT g FROM generations")}
+            gen_dir = self.reg.root / "generations"
+            if gen_dir.exists():
+                for p in gen_dir.iterdir():
+                    if p.is_dir() and p.name not in registered:
+                        shutil.rmtree(p, ignore_errors=True)
         after_rows = self.reg.read("SELECT size_bytes FROM generations WHERE state!='ABSENT'")
         after = sum(r["size_bytes"] for r in after_rows)
         return {"action": "PLAN_ONLY" if dry_run else "PRUNED", "target_bytes": target,
@@ -1640,7 +1673,13 @@ def serialized_operation(method):
         try:
             try: fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
             except BlockingIOError: raise CASError("OPERATION_BUSY", code=3) from None
-            return method(self, *args, **kwargs)
+            if hasattr(self, "supervisor") and hasattr(self.supervisor, "_op_guards"):
+                self.supervisor._op_guards[o] = fd
+            try:
+                return method(self, *args, **kwargs)
+            finally:
+                if hasattr(self, "supervisor") and hasattr(self.supervisor, "_op_guards"):
+                    self.supervisor._op_guards.pop(o, None)
         finally: os.close(fd)
     return call
 
@@ -1677,18 +1716,23 @@ class DriveEngine:
     def _capture(self, source: str, row: dict, root: str, o: str | None, *, provider: bool) -> tuple[str, dict]:
         g = new_id(); dest = self.reg.root / "generations" / g
         contract = decode(row["contract"])
-        if provider:
-            estimate = self._run("inspect_manifest", {"source": source, "root": root,
-                "intake": row["intake"], "binding": [row["intake_dev"], row["intake_ino"]],
-                "max_bytes": self.c["max_task_bytes"]}, None, provider=True)
-            if o is not None: self.reg.reserve(o, estimate["reserve_bytes"])
-            else: self._capacity(estimate["reserve_bytes"])
-        evidence = self._run("capture", {"source": source, "output": str(dest), "root": root,
-                "contract": contract, "intake": row["intake"],
-                "binding": [row["intake_dev"], row["intake_ino"]] if provider else None}, o, provider)
-        # Second process, after acquisition writer exit; check retained logical bytes before registration.
-        self._run("check_outputs", {"snapshot": str(dest), "evidence": evidence}, o)
-        return g, evidence
+        try:
+            if provider:
+                estimate = self._run("inspect_manifest", {"source": source, "root": root,
+                    "intake": row["intake"], "binding": [row["intake_dev"], row["intake_ino"]],
+                    "max_bytes": self.c["max_task_bytes"]}, None, provider=True)
+                if o is not None: self.reg.reserve(o, estimate["reserve_bytes"])
+                else: self._capacity(estimate["reserve_bytes"])
+            evidence = self._run("capture", {"source": source, "output": str(dest), "root": root,
+                    "contract": contract, "intake": row["intake"],
+                    "binding": [row["intake_dev"], row["intake_ino"]] if provider else None}, o, provider)
+            # Second process, after acquisition writer exit; check retained logical bytes before registration.
+            self._run("check_outputs", {"snapshot": str(dest), "evidence": evidence}, o)
+            return g, evidence
+        except Exception:
+            if dest.exists():
+                shutil.rmtree(dest, ignore_errors=True)
+            raise
 
     def _snapshot(self, root: str, owner: str) -> tuple[dict, dict]:
         row = self.reg.pin_root(root, owner)
@@ -1888,8 +1932,9 @@ class DriveEngine:
                 con.execute("DELETE FROM reservations WHERE o=?", (o,))
             return result
         except CASError as exc:
-            if exc.reason == "OUTPUT_EXISTS":
-                with self.reg.transaction() as con:
+            with self.reg.transaction() as con:
+                con.execute("DELETE FROM pins WHERE owner=? AND kind='READER'", (o,))
+                if exc.reason == "OUTPUT_EXISTS":
                     con.execute("UPDATE exports SET state='BLOCKED' WHERE o=?", (o,))
             self.reg.fail(o, exc); raise
 

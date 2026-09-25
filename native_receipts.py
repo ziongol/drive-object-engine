@@ -252,7 +252,9 @@ class ReceiptService:
         common.uint(maximum,128,1)
         if offline: return [dict(state='OFFLINE_HOLD',provider_calls=0,remote_evidence='NOT_ASSERTED')]
         self.enqueue(maximum); out=[]
-        jobs=self.reg.read("SELECT job_id FROM t6_receipt_outbox WHERE state<>'LOCAL_PUBLISHED' ORDER BY sequence LIMIT ?",(maximum,))
+        jobs=self.reg.read("SELECT job_id FROM t6_receipt_outbox WHERE state NOT IN ('LOCAL_PUBLISHED','HOLD_RETRY') ORDER BY sequence LIMIT ?",(maximum,))
+        if not jobs:
+            jobs=self.reg.read("SELECT job_id FROM t6_receipt_outbox WHERE state<>'LOCAL_PUBLISHED' ORDER BY sequence LIMIT ?",(maximum,))
         for item in jobs:
             job=item['job_id']
             try:
@@ -261,6 +263,8 @@ class ReceiptService:
                     row=self.reg.read('SELECT * FROM t6_receipt_outbox WHERE job_id=?',(job,))[0]
                     if row['state']=='LOCAL_PUBLISHED': continue
                     if row['attempts']>=8:
+                        with self.reg.transaction() as con:
+                            con.execute("UPDATE t6_receipt_outbox SET state='HOLD_RETRY' WHERE job_id=? AND state!='LOCAL_PUBLISHED'",(job,))
                         out.append(dict(job_id=job,state='HOLD_RETRY',attempts=row['attempts'])); continue
                     raw=self._seal(row)
                     verify_signed_receipt(raw,public_trust(self.config_path),common.sha(raw))
