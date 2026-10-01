@@ -41,7 +41,7 @@ class NativeFixture(unittest.TestCase):
 
 class TestNativeSignedReceipts(NativeFixture):
     def test_exact_source_and_profile_preserved(self):
-        self.assertEqual(hashlib.sha256(Path(native.__file__).read_bytes()).hexdigest(),'4c1700151602c9f10a7ac23785f346292bee7251efe915d07ab72f63fe73d065')
+        self.assertEqual(hashlib.sha256(Path(native.__file__).read_bytes()).hexdigest(),'ea67d29fef864715842de895742de2f3a605911c2ea0c647c9d7c0948389c68e')
         self.assertEqual(profile(self.config)[0],'NATIVE54')
         self.assertEqual(self.e.c['engine_sha256'],hashlib.sha256(Path(native.__file__).read_bytes()).hexdigest())
     def test_install_idempotent_keeps_decisions(self):

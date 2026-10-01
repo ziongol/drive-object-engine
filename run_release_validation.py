@@ -29,7 +29,7 @@ def execute(item):
     return dict(group=name,returncode=code,error=error,elapsed_seconds=time.monotonic()-t,result=report)
 
 if __name__=='__main__':
-    out=Path(sys.argv[1] if len(sys.argv)>1 else 'evidence/release-validation').resolve();out.mkdir(parents=True,exist_ok=False)
+    out=Path(sys.argv[1] if len(sys.argv)>1 else 'evidence/release-validation').resolve();out.mkdir(parents=True,exist_ok=True)
     before=sources(); begin=time.monotonic(); at=datetime.datetime.now(datetime.timezone.utc).isoformat()
     jobs=[('chat66',[sys.executable,str(BASE/'run_validation.py'),str(out/'chat66')],out),
           ('native54',[sys.executable,str(BASE/'run_native_validation.py'),str(out/'native54')],out),
