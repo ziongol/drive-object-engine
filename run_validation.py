@@ -25,7 +25,7 @@ class RecordedResult(unittest.TextTestResult):
 
 if __name__=='__main__':
     out=Path(sys.argv[1] if len(sys.argv)>1 else 'evidence/final_run')
-    out.mkdir(parents=True,exist_ok=False)
+    out.mkdir(parents=True,exist_ok=True)
     files={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (Path(drive_cas.__file__),Path(test_drive_cas.__file__))}
     started=dt.datetime.now(dt.timezone.utc).isoformat(); clock=time.perf_counter()
     suite=unittest.defaultTestLoader.loadTestsFromModule(test_drive_cas)

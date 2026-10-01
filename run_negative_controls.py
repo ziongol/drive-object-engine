@@ -53,7 +53,7 @@ MUTANTS=[
 
 if __name__=='__main__':
     output=Path(sys.argv[1] if len(sys.argv)>1 else 'evidence/negative_controls')
-    output.mkdir(parents=True,exist_ok=False)
+    output.mkdir(parents=True,exist_ok=True)
     source=(BASE/'drive_cas.py').read_text(); source_hash=hashlib.sha256(source.encode()).hexdigest()
     records=[]
     for name,old,new,test in MUTANTS:

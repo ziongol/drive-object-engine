@@ -19,7 +19,7 @@ def sources():
     return {p.relative_to(BASE).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
 
 if __name__=='__main__':
-    out=Path(sys.argv[1]); module=sys.argv[2]; out.mkdir(parents=True,exist_ok=False)
+    out=Path(sys.argv[1]); module=sys.argv[2]; out.mkdir(parents=True,exist_ok=True)
     before=sources(); start=time.monotonic(); at=datetime.datetime.now(datetime.timezone.utc).isoformat()
     suite=unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(module))
     with (out/'unittest.log').open('w') as log:

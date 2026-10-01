@@ -10,7 +10,7 @@ import tempfile
 import time
 BASE=Path(__file__).resolve().parent
 if __name__=='__main__':
-    out=Path(sys.argv[1]).resolve();out.mkdir(parents=True,exist_ok=False)
+    out=Path(sys.argv[1]).resolve();out.mkdir(parents=True,exist_ok=True)
     start=time.monotonic()
     with tempfile.TemporaryDirectory(prefix='gdoe-native54-validation-') as tmp:
         root=Path(tmp); shutil.copyfile(BASE/'drive_cas_native.py',root/'drive_cas.py')
